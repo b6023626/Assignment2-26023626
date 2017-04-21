@@ -34,52 +34,73 @@ namespace _26923626___assignment2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (btn1click == 5)
-            {
-                btn1click = 1;
-            }
-            else
-            {
+
                 btn1click++;
-            }
 
                 if(btn1click == 1){
+
                     word += "p";
+                    wordbuilder();
                 }
                 else if(btn1click == 2)
                 {
-                    word = word.Remove(word.Length - 1);
+                    word = word.Remove(word.Length - 1, 1);
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "q";
+                    wordbuilder();
                 }
                 else if (btn1click == 3)
                 {
-                    word = word.Remove(word.Length - 1);
+                    word = word.Remove(word.Length - 1, 1);
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "r";
+                    wordbuilder();
                 }
                 else if (btn1click == 4)
                 {
                     word = word.Remove(word.Length - 1);
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "s";
+                    wordbuilder();
                 }
                 else if (btn1click == 5)
                 {
                     word = word.Remove(word.Length - 1);
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "1";
+                    wordbuilder();
                 }
                 else if (btn1click == 6)
                 {
                     word = word.Remove(word.Length - 1);
-                    word += "Q";
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                    word += "P";
+                    wordbuilder();
                 }
                 else if (btn1click == 7)
                 {
                     word = word.Remove(word.Length - 1);
-                    word += "R";
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                    word += "Q";
+                    wordbuilder();
                 }
                 else if (btn1click == 8)
                 {
                     word = word.Remove(word.Length - 1);
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                    word += "R";
+                    wordbuilder();
+                }
+                else if (btn1click == 9)
+                {
+                    btn1click = 0;
+                    word = word.Remove(word.Length - 1);
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "S";
+                    wordbuilder();
+                    btn1click = 0;
+                    word = "";
+                    
                 }
         }
 
@@ -92,5 +113,12 @@ namespace _26923626___assignment2
         {
             richTextBox2.Text += richTextBox1.Text;
         }
+
+        public void wordbuilder()
+        {
+            richTextBox1.Text += word;
+
+        }
+
     }
 }

@@ -180,6 +180,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "2\r\nTUV";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -244,7 +245,8 @@
             // 
             // btn2timer
             // 
-            this.btn2timer.Interval = 300;
+            this.btn2timer.Interval = 3000;
+            this.btn2timer.Tick += new System.EventHandler(this.btn2timer_Tick);
             // 
             // btn3timer
             // 

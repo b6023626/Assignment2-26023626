@@ -133,6 +133,11 @@ namespace _26923626___assignment2
         {
             richTextBox2.Text += richTextBox1.Text;
             richTextBox1.Text = "";
+
+            btn1timer.Enabled = false;
+            btn1click = 0;
+            word = "";
+
         }
 
         public void wordbuilder()
@@ -148,6 +153,109 @@ namespace _26923626___assignment2
             btn1click = 0;
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btn2click++;
+
+            if (btn2click == 1)
+            {
+                if (btn2timer.Enabled == true)
+                {
+                    richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                    btn2timer.Enabled = false;
+                }
+                btn2timer.Enabled = true;
+                word += "p";
+                wordbuilder();
+
+            }
+            else if (btn2click == 2)
+            {
+                btn2timer.Enabled = false;
+                btn2timer.Enabled = true;
+                word = word.Remove(word.Length - 1, 1);
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                word += "q";
+                wordbuilder();
+            }
+            else if (btn2click == 3)
+            {
+                btn2timer.Enabled = false;
+                btn2timer.Enabled = true;
+                word = word.Remove(word.Length - 1, 1);
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                word += "r";
+                wordbuilder();
+            }
+            else if (btn2click == 4)
+            {
+                btn2timer.Enabled = false;
+                btn2timer.Enabled = true;
+                word = word.Remove(word.Length - 1);
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                word += "s";
+                wordbuilder();
+            }
+            else if (btn2click == 5)
+            {
+                btn2timer.Enabled = false;
+                btn2timer.Enabled = true;
+                word = word.Remove(word.Length - 1);
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                word += "1";
+                wordbuilder();
+            }
+            else if (btn2click == 6)
+            {
+                btn2timer.Enabled = false;
+                btn2timer.Enabled = true;
+                word = word.Remove(word.Length - 1);
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                word += "P";
+                wordbuilder();
+            }
+            else if (btn2click == 7)
+            {
+                btn2timer.Enabled = false;
+                btn2timer.Enabled = true;
+                word = word.Remove(word.Length - 1);
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                word += "Q";
+                wordbuilder();
+            }
+            else if (btn2click == 8)
+            {
+                btn2timer.Enabled = false;
+                btn2timer.Enabled = true;
+                word = word.Remove(word.Length - 1);
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                word += "R";
+                wordbuilder();
+            }
+            else if (btn2click == 9)
+            {
+                btn2timer.Enabled = false;
+                btn2timer.Enabled = true;
+                btn2click = 0;
+                word = word.Remove(word.Length - 1);
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                word += "S";
+                wordbuilder();
+                word = "";
+
+
+            }
+        }
+
+        private void btn2timer_Tick(object sender, EventArgs e)
+        {
+            word = "";
+            btn2timer.Enabled = false;
+            btn2click = 0;
+        }
+
+           
 
     }
 }

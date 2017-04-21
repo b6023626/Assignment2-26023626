@@ -43,16 +43,44 @@ namespace _26923626___assignment2
                 btn1click++;
             }
 
-            if(btn1click == 1){
-
-
-            }
-          
-
-
-
-
-
+                if(btn1click == 1){
+                    word += "p";
+                }
+                else if(btn1click == 2)
+                {
+                    word = word.Remove(word.Length - 1);
+                    word += "q";
+                }
+                else if (btn1click == 3)
+                {
+                    word = word.Remove(word.Length - 1);
+                    word += "r";
+                }
+                else if (btn1click == 4)
+                {
+                    word = word.Remove(word.Length - 1);
+                    word += "s";
+                }
+                else if (btn1click == 5)
+                {
+                    word = word.Remove(word.Length - 1);
+                    word += "1";
+                }
+                else if (btn1click == 6)
+                {
+                    word = word.Remove(word.Length - 1);
+                    word += "Q";
+                }
+                else if (btn1click == 7)
+                {
+                    word = word.Remove(word.Length - 1);
+                    word += "R";
+                }
+                else if (btn1click == 8)
+                {
+                    word = word.Remove(word.Length - 1);
+                    word += "S";
+                }
         }
 
         private void entbtn_Click(object sender, EventArgs e)

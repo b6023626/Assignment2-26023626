@@ -34,7 +34,9 @@ namespace _26923626___assignment2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            btn2click = 0;
+            btn2timer.Enabled = false;
+            wordbuilder();
                 btn1click++;
 
                 if(btn1click == 1){
@@ -45,77 +47,84 @@ namespace _26923626___assignment2
                     btn1timer.Enabled = true;
                     word += "p";
                     wordbuilder();
+                    word = "";
 
                 }
                 else if(btn1click == 2)
                 {
                     btn1timer.Enabled = false;
                     btn1timer.Enabled = true;
-                    word = word.Remove(word.Length - 1, 1);
+                    
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "q";
                     wordbuilder();
+                    word = "";
                 }
                 else if (btn1click == 3)
                 {
                     btn1timer.Enabled = false;
                     btn1timer.Enabled = true;
-                    word = word.Remove(word.Length - 1, 1);
+                    
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "r";
                     wordbuilder();
+                    word = "";
                 }
                 else if (btn1click == 4)
                 {
                     btn1timer.Enabled = false;
                     btn1timer.Enabled = true;
-                    word = word.Remove(word.Length - 1);
+                    
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "s";
                     wordbuilder();
+                    word = "";
                 }
                 else if (btn1click == 5)
                 {
                     btn1timer.Enabled = false;
                     btn1timer.Enabled = true;
-                    word = word.Remove(word.Length - 1);
+                    
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "1";
                     wordbuilder();
+                    word = "";
                 }
                 else if (btn1click == 6)
                 {
                     btn1timer.Enabled = false;
                     btn1timer.Enabled = true;
-                    word = word.Remove(word.Length - 1);
+                    
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "P";
                     wordbuilder();
+                    word = "";
                 }
                 else if (btn1click == 7)
                 {
                     btn1timer.Enabled = false;
                     btn1timer.Enabled = true;
-                    word = word.Remove(word.Length - 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "Q";
                     wordbuilder();
+                    word = "";
                 }
                 else if (btn1click == 8)
                 {
                     btn1timer.Enabled = false;
                     btn1timer.Enabled = true;
-                    word = word.Remove(word.Length - 1);
+                    
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "R";
                     wordbuilder();
+                    word = "";
                 }
                 else if (btn1click == 9)
                 {
                     btn1timer.Enabled = false;
                     btn1timer.Enabled = true;
                     btn1click = 0;
-                    word = word.Remove(word.Length - 1);
+                    
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "S";
                     wordbuilder();
@@ -156,6 +165,10 @@ namespace _26923626___assignment2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            btn1click = 0;
+            btn1timer.Enabled = false;
+            wordbuilder();
+
             btn2click++;
 
             if (btn2click == 1)
@@ -166,86 +179,72 @@ namespace _26923626___assignment2
                     btn2timer.Enabled = false;
                 }
                 btn2timer.Enabled = true;
-                word += "p";
+                word += "t";
                 wordbuilder();
+                word = "";
 
             }
             else if (btn2click == 2)
             {
                 btn2timer.Enabled = false;
                 btn2timer.Enabled = true;
-                word = word.Remove(word.Length - 1, 1);
+                
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
-                word += "q";
+                word += "u";
                 wordbuilder();
+                word = "";
             }
             else if (btn2click == 3)
             {
                 btn2timer.Enabled = false;
                 btn2timer.Enabled = true;
-                word = word.Remove(word.Length - 1, 1);
+                
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
-                word += "r";
+                word += "v";
                 wordbuilder();
+                word = "";
             }
             else if (btn2click == 4)
             {
                 btn2timer.Enabled = false;
                 btn2timer.Enabled = true;
-                word = word.Remove(word.Length - 1);
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
-                word += "s";
+                word += "2";
                 wordbuilder();
+                word = "";
             }
             else if (btn2click == 5)
             {
                 btn2timer.Enabled = false;
                 btn2timer.Enabled = true;
-                word = word.Remove(word.Length - 1);
+                
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
-                word += "1";
+                word += "T";
                 wordbuilder();
+                word = "";
             }
             else if (btn2click == 6)
             {
                 btn2timer.Enabled = false;
                 btn2timer.Enabled = true;
-                word = word.Remove(word.Length - 1);
+                
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
-                word += "P";
+                word += "U";
                 wordbuilder();
+                word = "";
             }
             else if (btn2click == 7)
             {
                 btn2timer.Enabled = false;
                 btn2timer.Enabled = true;
-                word = word.Remove(word.Length - 1);
+                                btn2click = 0;
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
-                word += "Q";
-                wordbuilder();
-            }
-            else if (btn2click == 8)
-            {
-                btn2timer.Enabled = false;
-                btn2timer.Enabled = true;
-                word = word.Remove(word.Length - 1);
-                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
-                word += "R";
-                wordbuilder();
-            }
-            else if (btn2click == 9)
-            {
-                btn2timer.Enabled = false;
-                btn2timer.Enabled = true;
-                btn2click = 0;
-                word = word.Remove(word.Length - 1);
-                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
-                word += "S";
+                word += "V";
+
                 wordbuilder();
                 word = "";
-
-
             }
+
         }
 
         private void btn2timer_Tick(object sender, EventArgs e)

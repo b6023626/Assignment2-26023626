@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.modebtn = new System.Windows.Forms.Button();
@@ -48,6 +49,10 @@
             this.singlebtn = new System.Windows.Forms.Button();
             this.entbtn = new System.Windows.Forms.Button();
             this.settingtxt = new System.Windows.Forms.TextBox();
+            this.btn1timer = new System.Windows.Forms.Timer(this.components);
+            this.btn2timer = new System.Windows.Forms.Timer(this.components);
+            this.btn3timer = new System.Windows.Forms.Timer(this.components);
+            this.btn4timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -232,6 +237,23 @@
             this.settingtxt.TabIndex = 20;
             this.settingtxt.Text = "Multipress";
             // 
+            // btn1timer
+            // 
+            this.btn1timer.Interval = 3000;
+            this.btn1timer.Tick += new System.EventHandler(this.btn1timer_Tick);
+            // 
+            // btn2timer
+            // 
+            this.btn2timer.Interval = 300;
+            // 
+            // btn3timer
+            // 
+            this.btn3timer.Interval = 300;
+            // 
+            // btn4timer
+            // 
+            this.btn4timer.Interval = 300;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +308,10 @@
         private System.Windows.Forms.Button singlebtn;
         private System.Windows.Forms.Button entbtn;
         private System.Windows.Forms.TextBox settingtxt;
+        private System.Windows.Forms.Timer btn1timer;
+        private System.Windows.Forms.Timer btn2timer;
+        private System.Windows.Forms.Timer btn3timer;
+        private System.Windows.Forms.Timer btn4timer;
     }
 }
 

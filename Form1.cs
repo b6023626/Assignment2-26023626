@@ -38,12 +38,19 @@ namespace _26923626___assignment2
                 btn1click++;
 
                 if(btn1click == 1){
-
+                    if (btn1timer.Enabled == true)
+                    { richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                    btn1timer.Enabled = false;
+                    }
+                    btn1timer.Enabled = true;
                     word += "p";
                     wordbuilder();
+
                 }
                 else if(btn1click == 2)
                 {
+                    btn1timer.Enabled = false;
+                    btn1timer.Enabled = true;
                     word = word.Remove(word.Length - 1, 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "q";
@@ -51,6 +58,8 @@ namespace _26923626___assignment2
                 }
                 else if (btn1click == 3)
                 {
+                    btn1timer.Enabled = false;
+                    btn1timer.Enabled = true;
                     word = word.Remove(word.Length - 1, 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "r";
@@ -58,6 +67,8 @@ namespace _26923626___assignment2
                 }
                 else if (btn1click == 4)
                 {
+                    btn1timer.Enabled = false;
+                    btn1timer.Enabled = true;
                     word = word.Remove(word.Length - 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "s";
@@ -65,6 +76,8 @@ namespace _26923626___assignment2
                 }
                 else if (btn1click == 5)
                 {
+                    btn1timer.Enabled = false;
+                    btn1timer.Enabled = true;
                     word = word.Remove(word.Length - 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "1";
@@ -72,6 +85,8 @@ namespace _26923626___assignment2
                 }
                 else if (btn1click == 6)
                 {
+                    btn1timer.Enabled = false;
+                    btn1timer.Enabled = true;
                     word = word.Remove(word.Length - 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "P";
@@ -79,6 +94,8 @@ namespace _26923626___assignment2
                 }
                 else if (btn1click == 7)
                 {
+                    btn1timer.Enabled = false;
+                    btn1timer.Enabled = true;
                     word = word.Remove(word.Length - 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "Q";
@@ -86,6 +103,8 @@ namespace _26923626___assignment2
                 }
                 else if (btn1click == 8)
                 {
+                    btn1timer.Enabled = false;
+                    btn1timer.Enabled = true;
                     word = word.Remove(word.Length - 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "R";
@@ -93,12 +112,13 @@ namespace _26923626___assignment2
                 }
                 else if (btn1click == 9)
                 {
+                    btn1timer.Enabled = false;
+                    btn1timer.Enabled = true;
                     btn1click = 0;
                     word = word.Remove(word.Length - 1);
                     richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                     word += "S";
                     wordbuilder();
-                    btn1click = 0;
                     word = "";
                     
                 }
@@ -112,11 +132,20 @@ namespace _26923626___assignment2
         private void triplebtn_Click(object sender, EventArgs e)
         {
             richTextBox2.Text += richTextBox1.Text;
+            richTextBox1.Text = "";
         }
 
         public void wordbuilder()
         {
             richTextBox1.Text += word;
+
+        }
+
+        private void btn1timer_Tick(object sender, EventArgs e)
+        {
+            word = "";
+            btn1timer.Enabled = false;
+            btn1click = 0;
 
         }
 

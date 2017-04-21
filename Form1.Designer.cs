@@ -165,6 +165,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "1\r\nPQRS";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -201,6 +202,7 @@
             this.triplebtn.TabIndex = 17;
             this.triplebtn.Text = "000\r\n[ _ ]";
             this.triplebtn.UseVisualStyleBackColor = true;
+            this.triplebtn.Click += new System.EventHandler(this.triplebtn_Click);
             // 
             // singlebtn
             // 
@@ -219,6 +221,7 @@
             this.entbtn.TabIndex = 19;
             this.entbtn.Text = "Enter";
             this.entbtn.UseVisualStyleBackColor = true;
+            this.entbtn.Click += new System.EventHandler(this.entbtn_Click);
             // 
             // settingtxt
             // 

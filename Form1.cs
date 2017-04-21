@@ -16,5 +16,10 @@ namespace _26923626___assignment2
         {
             InitializeComponent();
         }
+
+        private void modebtn_Click(object sender, EventArgs e)
+        {
+            settingtxt.Text = "Prediction";
+        }
     }
 }

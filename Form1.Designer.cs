@@ -30,7 +30,6 @@
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.settingbtn = new System.Windows.Forms.Button();
             this.modebtn = new System.Windows.Forms.Button();
             this.nextbtn = new System.Windows.Forms.Button();
             this.prevbtn = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.triplebtn = new System.Windows.Forms.Button();
             this.singlebtn = new System.Windows.Forms.Button();
             this.entbtn = new System.Windows.Forms.Button();
+            this.settingtxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -66,15 +66,6 @@
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = "";
             // 
-            // settingbtn
-            // 
-            this.settingbtn.Location = new System.Drawing.Point(173, 85);
-            this.settingbtn.Name = "settingbtn";
-            this.settingbtn.Size = new System.Drawing.Size(75, 23);
-            this.settingbtn.TabIndex = 2;
-            this.settingbtn.Text = "MultiPress";
-            this.settingbtn.UseVisualStyleBackColor = true;
-            // 
             // modebtn
             // 
             this.modebtn.Location = new System.Drawing.Point(12, 117);
@@ -83,6 +74,7 @@
             this.modebtn.TabIndex = 3;
             this.modebtn.Text = "Mode";
             this.modebtn.UseVisualStyleBackColor = true;
+            this.modebtn.Click += new System.EventHandler(this.modebtn_Click);
             // 
             // nextbtn
             // 
@@ -228,11 +220,21 @@
             this.entbtn.Text = "Enter";
             this.entbtn.UseVisualStyleBackColor = true;
             // 
+            // settingtxt
+            // 
+            this.settingtxt.Location = new System.Drawing.Point(172, 86);
+            this.settingtxt.Name = "settingtxt";
+            this.settingtxt.ReadOnly = true;
+            this.settingtxt.Size = new System.Drawing.Size(57, 20);
+            this.settingtxt.TabIndex = 20;
+            this.settingtxt.Text = "Multipress";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 349);
+            this.Controls.Add(this.settingtxt);
             this.Controls.Add(this.entbtn);
             this.Controls.Add(this.singlebtn);
             this.Controls.Add(this.triplebtn);
@@ -250,12 +252,12 @@
             this.Controls.Add(this.prevbtn);
             this.Controls.Add(this.nextbtn);
             this.Controls.Add(this.modebtn);
-            this.Controls.Add(this.settingbtn);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
             this.Name = "Form1";
             this.Text = "Mini Keyboard";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -263,7 +265,6 @@
 
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button settingbtn;
         private System.Windows.Forms.Button modebtn;
         private System.Windows.Forms.Button nextbtn;
         private System.Windows.Forms.Button prevbtn;
@@ -281,6 +282,7 @@
         private System.Windows.Forms.Button triplebtn;
         private System.Windows.Forms.Button singlebtn;
         private System.Windows.Forms.Button entbtn;
+        private System.Windows.Forms.TextBox settingtxt;
     }
 }
 

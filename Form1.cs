@@ -24,6 +24,7 @@ namespace _26923626___assignment2
         {
             InitializeComponent();
 
+
         }
 
         private void anybtn_Click(object sender, EventArgs e)

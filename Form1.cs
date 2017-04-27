@@ -123,6 +123,7 @@ namespace _26923626___assignment2
             {
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
             }
+
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)

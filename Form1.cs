@@ -26,15 +26,30 @@ namespace _26923626___assignment2
 
         private void anybtn_Click(object sender, EventArgs e)
         {
+            buttonpressed = ((Button)sender).Name;
             if (buttonpressed == ((Button)sender).Name && timer1.Enabled == true)
             {
+                int index = CurrentListbox.SelectedIndex + 1;
+                CurrentListbox.SelectedIndex = index;
 
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+
+                try
+                { richTextBox1.Text += CurrentListbox.SelectedItem; }
+
+                catch
+                {
+                    CurrentListbox.SelectedIndex = 0;
+
+                }
+                
                 timer1.Enabled = false;
+                timer1.Enabled = true;  // resets the timer
             }else{
 
 
             }
-            buttonpressed = ((Button)sender).Name;
+            
         }
 
 

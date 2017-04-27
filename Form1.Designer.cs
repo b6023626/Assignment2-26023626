@@ -44,15 +44,23 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.symbtn = new System.Windows.Forms.Button();
+            this.buttonstar = new System.Windows.Forms.Button();
             this.triplebtn = new System.Windows.Forms.Button();
-            this.singlebtn = new System.Windows.Forms.Button();
+            this.buttonhash = new System.Windows.Forms.Button();
             this.entbtn = new System.Windows.Forms.Button();
             this.settingtxt = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.listbutton1 = new System.Windows.Forms.ListBox();
             this.listbutton2 = new System.Windows.Forms.ListBox();
             this.listbutton3 = new System.Windows.Forms.ListBox();
+            this.listbutton4 = new System.Windows.Forms.ListBox();
+            this.listbutton5 = new System.Windows.Forms.ListBox();
+            this.listbutton6 = new System.Windows.Forms.ListBox();
+            this.listbutton7 = new System.Windows.Forms.ListBox();
+            this.listbutton8 = new System.Windows.Forms.ListBox();
+            this.listbutton9 = new System.Windows.Forms.ListBox();
+            this.listbuttonstar = new System.Windows.Forms.ListBox();
+            this.listbuttonhash = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -117,6 +125,7 @@
             this.button7.TabIndex = 7;
             this.button7.Text = "7\r\n.,\"";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.anybtn_Click);
             // 
             // button8
             // 
@@ -126,7 +135,7 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "8\r\nABC";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.anybtn_Click);
             // 
             // button9
             // 
@@ -136,6 +145,7 @@
             this.button9.TabIndex = 9;
             this.button9.Text = "9\r\nDEF";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.anybtn_Click);
             // 
             // button4
             // 
@@ -145,6 +155,7 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "4\r\nGHI";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.anybtn_Click);
             // 
             // button5
             // 
@@ -154,6 +165,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "5\r\nJKL";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.anybtn_Click);
             // 
             // button6
             // 
@@ -163,6 +175,7 @@
             this.button6.TabIndex = 12;
             this.button6.Text = "6\r\nMNO";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.anybtn_Click);
             // 
             // button1
             // 
@@ -172,7 +185,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "1\r\nPQRS";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.anybtn_Click);
             // 
             // button2
             // 
@@ -182,7 +195,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "2\r\nTUV";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.anybtn_Click);
             // 
             // button3
             // 
@@ -192,15 +205,16 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "3\r\nWXYZ";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.anybtn_Click);
             // 
-            // symbtn
+            // buttonstar
             // 
-            this.symbtn.Location = new System.Drawing.Point(12, 292);
-            this.symbtn.Name = "symbtn";
-            this.symbtn.Size = new System.Drawing.Size(52, 40);
-            this.symbtn.TabIndex = 16;
-            this.symbtn.Text = "*-_";
-            this.symbtn.UseVisualStyleBackColor = true;
+            this.buttonstar.Location = new System.Drawing.Point(12, 292);
+            this.buttonstar.Name = "buttonstar";
+            this.buttonstar.Size = new System.Drawing.Size(52, 40);
+            this.buttonstar.TabIndex = 16;
+            this.buttonstar.Text = "*-_";
+            this.buttonstar.UseVisualStyleBackColor = true;
             // 
             // triplebtn
             // 
@@ -212,14 +226,14 @@
             this.triplebtn.UseVisualStyleBackColor = true;
             this.triplebtn.Click += new System.EventHandler(this.triplebtn_Click);
             // 
-            // singlebtn
+            // buttonhash
             // 
-            this.singlebtn.Location = new System.Drawing.Point(128, 292);
-            this.singlebtn.Name = "singlebtn";
-            this.singlebtn.Size = new System.Drawing.Size(52, 40);
-            this.singlebtn.TabIndex = 18;
-            this.singlebtn.Text = "#\r\n0 00";
-            this.singlebtn.UseVisualStyleBackColor = true;
+            this.buttonhash.Location = new System.Drawing.Point(128, 292);
+            this.buttonhash.Name = "buttonhash";
+            this.buttonhash.Size = new System.Drawing.Size(52, 40);
+            this.buttonhash.TabIndex = 18;
+            this.buttonhash.Text = "#\r\n0 00";
+            this.buttonhash.UseVisualStyleBackColor = true;
             // 
             // entbtn
             // 
@@ -297,19 +311,144 @@
             this.listbutton3.Size = new System.Drawing.Size(53, 82);
             this.listbutton3.TabIndex = 23;
             // 
+            // listbutton4
+            // 
+            this.listbutton4.FormattingEnabled = true;
+            this.listbutton4.Items.AddRange(new object[] {
+            "g",
+            "h",
+            "i",
+            "4",
+            "G",
+            "H",
+            "I"});
+            this.listbutton4.Location = new System.Drawing.Point(278, 276);
+            this.listbutton4.Name = "listbutton4";
+            this.listbutton4.Size = new System.Drawing.Size(53, 82);
+            this.listbutton4.TabIndex = 24;
+            // 
+            // listbutton5
+            // 
+            this.listbutton5.FormattingEnabled = true;
+            this.listbutton5.Items.AddRange(new object[] {
+            "j",
+            "k",
+            "l",
+            "5",
+            "J",
+            "K",
+            "L"});
+            this.listbutton5.Location = new System.Drawing.Point(337, 12);
+            this.listbutton5.Name = "listbutton5";
+            this.listbutton5.Size = new System.Drawing.Size(53, 82);
+            this.listbutton5.TabIndex = 25;
+            // 
+            // listbutton6
+            // 
+            this.listbutton6.FormattingEnabled = true;
+            this.listbutton6.Items.AddRange(new object[] {
+            "m",
+            "n",
+            "o",
+            "6",
+            "M",
+            "N",
+            "O"});
+            this.listbutton6.Location = new System.Drawing.Point(337, 100);
+            this.listbutton6.Name = "listbutton6";
+            this.listbutton6.Size = new System.Drawing.Size(53, 82);
+            this.listbutton6.TabIndex = 26;
+            // 
+            // listbutton7
+            // 
+            this.listbutton7.FormattingEnabled = true;
+            this.listbutton7.Items.AddRange(new object[] {
+            ".",
+            ",",
+            "\"",
+            "7"});
+            this.listbutton7.Location = new System.Drawing.Point(337, 188);
+            this.listbutton7.Name = "listbutton7";
+            this.listbutton7.Size = new System.Drawing.Size(53, 82);
+            this.listbutton7.TabIndex = 27;
+            // 
+            // listbutton8
+            // 
+            this.listbutton8.FormattingEnabled = true;
+            this.listbutton8.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "8",
+            "A",
+            "B",
+            "C"});
+            this.listbutton8.Location = new System.Drawing.Point(337, 276);
+            this.listbutton8.Name = "listbutton8";
+            this.listbutton8.Size = new System.Drawing.Size(53, 82);
+            this.listbutton8.TabIndex = 28;
+            // 
+            // listbutton9
+            // 
+            this.listbutton9.FormattingEnabled = true;
+            this.listbutton9.Items.AddRange(new object[] {
+            "d",
+            "e",
+            "f",
+            "9",
+            "D",
+            "E",
+            "F"});
+            this.listbutton9.Location = new System.Drawing.Point(396, 12);
+            this.listbutton9.Name = "listbutton9";
+            this.listbutton9.Size = new System.Drawing.Size(53, 82);
+            this.listbutton9.TabIndex = 29;
+            // 
+            // listbuttonstar
+            // 
+            this.listbuttonstar.FormattingEnabled = true;
+            this.listbuttonstar.Items.AddRange(new object[] {
+            "+",
+            "-",
+            "_"});
+            this.listbuttonstar.Location = new System.Drawing.Point(396, 100);
+            this.listbuttonstar.Name = "listbuttonstar";
+            this.listbuttonstar.Size = new System.Drawing.Size(53, 82);
+            this.listbuttonstar.TabIndex = 30;
+            // 
+            // listbuttonhash
+            // 
+            this.listbuttonhash.FormattingEnabled = true;
+            this.listbuttonhash.Items.AddRange(new object[] {
+            "#",
+            "0",
+            "00"});
+            this.listbuttonhash.Location = new System.Drawing.Point(396, 188);
+            this.listbuttonhash.Name = "listbuttonhash";
+            this.listbuttonhash.Size = new System.Drawing.Size(53, 82);
+            this.listbuttonhash.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 349);
+            this.Controls.Add(this.listbuttonhash);
+            this.Controls.Add(this.listbuttonstar);
+            this.Controls.Add(this.listbutton9);
+            this.Controls.Add(this.listbutton8);
+            this.Controls.Add(this.listbutton7);
+            this.Controls.Add(this.listbutton6);
+            this.Controls.Add(this.listbutton5);
+            this.Controls.Add(this.listbutton4);
             this.Controls.Add(this.listbutton3);
             this.Controls.Add(this.listbutton2);
             this.Controls.Add(this.listbutton1);
             this.Controls.Add(this.settingtxt);
             this.Controls.Add(this.entbtn);
-            this.Controls.Add(this.singlebtn);
+            this.Controls.Add(this.buttonhash);
             this.Controls.Add(this.triplebtn);
-            this.Controls.Add(this.symbtn);
+            this.Controls.Add(this.buttonstar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -349,15 +488,23 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button symbtn;
+        private System.Windows.Forms.Button buttonstar;
         private System.Windows.Forms.Button triplebtn;
-        private System.Windows.Forms.Button singlebtn;
+        private System.Windows.Forms.Button buttonhash;
         private System.Windows.Forms.Button entbtn;
         private System.Windows.Forms.TextBox settingtxt;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ListBox listbutton1;
         private System.Windows.Forms.ListBox listbutton2;
         private System.Windows.Forms.ListBox listbutton3;
+        private System.Windows.Forms.ListBox listbutton4;
+        private System.Windows.Forms.ListBox listbutton5;
+        private System.Windows.Forms.ListBox listbutton6;
+        private System.Windows.Forms.ListBox listbutton7;
+        private System.Windows.Forms.ListBox listbutton8;
+        private System.Windows.Forms.ListBox listbutton9;
+        private System.Windows.Forms.ListBox listbuttonstar;
+        private System.Windows.Forms.ListBox listbuttonhash;
     }
 }
 

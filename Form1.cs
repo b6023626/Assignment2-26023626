@@ -13,23 +13,42 @@ namespace _26923626___assignment2
     public partial class Form1 : Form
     {
         string word = "";
-        int btn1click = 0;
-        int btn2click = 0;
-        int btn3click = 0;
-        int btn4click = 0;
-        int btn5click = 0;
-        int btn7click = 0;
-        int btn8click = 0;
-        int btn9click = 0;
+        string buttonpressed = "";
+
+        ListBox CurrentListbox;
+        
+
         public Form1()
         {
             InitializeComponent();
 
         }
 
+        private void anybtn_Click(object sender, EventArgs e)
+        {
+            if (buttonpressed == ((Button)sender).Name && timer1.Enabled == true)
+            {
+
+                timer1.Enabled = false;
+            }else{
+
+
+            }
+            buttonpressed = ((Button)sender).Name;
+        }
+
+
         private void modebtn_Click(object sender, EventArgs e)
         {
-            settingtxt.Text = "Prediction";
+
+            if (settingtxt.Text == "Multi-Press")
+            {
+                settingtxt.Text = "Prediction";
+            }
+            else
+            {
+                settingtxt.Text = "Multi-Press";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,13 +65,8 @@ namespace _26923626___assignment2
         {
             richTextBox2.Text += richTextBox1.Text;
             richTextBox1.Text = "";
-
-            timer.Enabled = false;
-            btn2timer.Enabled = false;
-            btn1click = 0;
-            btn2click = 0;
+            timer1.Enabled = false;
             word = "";
-
         }
 
         public void wordbuilder()
@@ -65,13 +79,6 @@ namespace _26923626___assignment2
         private void button2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn2timer_Tick(object sender, EventArgs e)
-        {
-            word = "";
-            btn2timer.Enabled = false;
-            btn2click = 0;
         }
 
         private void button8_Click(object sender, EventArgs e)

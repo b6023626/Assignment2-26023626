@@ -26,7 +26,7 @@ namespace _26923626___assignment2
 
         private void anybtn_Click(object sender, EventArgs e)
         {
-            buttonpressed = ((Button)sender).Name;
+      
             if (buttonpressed == ((Button)sender).Name && timer1.Enabled == true)
             {
                 int index = CurrentListbox.SelectedIndex + 1;
@@ -81,7 +81,7 @@ namespace _26923626___assignment2
 
         private void entbtn_Click(object sender, EventArgs e)
         {
-
+            richTextBox2.Text = richTextBox2.Text + Environment.NewLine; 
         }
 
         private void triplebtn_Click(object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace _26923626___assignment2
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            timer1.Enabled = false;
         }
 
         private void prevbtn_Click(object sender, EventArgs e)
@@ -120,6 +120,14 @@ namespace _26923626___assignment2
             {
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
             }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string savetext = richTextBox2.Text;
+            
+            System.IO.File.WriteAllText(@"C:\Users\Public\TestFolder\WriteText.txt", savetext);
+            MessageBox.Show("File have been saved to C:.Users.Public.TestFolder.WriteText.txt");
         }
 
            

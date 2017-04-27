@@ -121,6 +121,7 @@ namespace _26923626___assignment2
         {
             if (richTextBox1.Text.Length > 0)
             {
+
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
             }
 

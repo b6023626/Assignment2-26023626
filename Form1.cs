@@ -89,6 +89,7 @@ namespace _26923626___assignment2
         private void triplebtn_Click(object sender, EventArgs e)
         {
             richTextBox2.Text += richTextBox1.Text;
+            richTextBox2.Text += " ";
             richTextBox1.Text = "";
             timer1.Enabled = false;
             word = "";

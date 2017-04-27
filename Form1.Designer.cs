@@ -49,10 +49,10 @@
             this.singlebtn = new System.Windows.Forms.Button();
             this.entbtn = new System.Windows.Forms.Button();
             this.settingtxt = new System.Windows.Forms.TextBox();
-            this.btn1timer = new System.Windows.Forms.Timer(this.components);
-            this.btn2timer = new System.Windows.Forms.Timer(this.components);
-            this.btn3timer = new System.Windows.Forms.Timer(this.components);
-            this.btn4timer = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.listbutton1 = new System.Windows.Forms.ListBox();
+            this.listbutton2 = new System.Windows.Forms.ListBox();
+            this.listbutton3 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -98,6 +98,7 @@
             this.prevbtn.TabIndex = 5;
             this.prevbtn.Text = "Previous";
             this.prevbtn.UseVisualStyleBackColor = true;
+            this.prevbtn.Click += new System.EventHandler(this.prevbtn_Click);
             // 
             // sendbtn
             // 
@@ -125,6 +126,7 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "8\r\nABC";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -238,29 +240,71 @@
             this.settingtxt.TabIndex = 20;
             this.settingtxt.Text = "Multipress";
             // 
-            // btn1timer
+            // timer1
             // 
-            this.btn1timer.Interval = 3000;
-            this.btn1timer.Tick += new System.EventHandler(this.btn1timer_Tick);
+            this.timer1.Interval = 2000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btn2timer
+            // listbutton1
             // 
-            this.btn2timer.Interval = 3000;
-            this.btn2timer.Tick += new System.EventHandler(this.btn2timer_Tick);
+            this.listbutton1.FormattingEnabled = true;
+            this.listbutton1.Items.AddRange(new object[] {
+            "p",
+            "q",
+            "r",
+            "s",
+            "1",
+            "P",
+            "Q",
+            "R",
+            "S"});
+            this.listbutton1.Location = new System.Drawing.Point(278, 12);
+            this.listbutton1.Name = "listbutton1";
+            this.listbutton1.Size = new System.Drawing.Size(53, 82);
+            this.listbutton1.TabIndex = 21;
             // 
-            // btn3timer
+            // listbutton2
             // 
-            this.btn3timer.Interval = 300;
+            this.listbutton2.FormattingEnabled = true;
+            this.listbutton2.Items.AddRange(new object[] {
+            "t",
+            "u",
+            "v",
+            "2",
+            "T",
+            "U",
+            "V"});
+            this.listbutton2.Location = new System.Drawing.Point(278, 100);
+            this.listbutton2.Name = "listbutton2";
+            this.listbutton2.Size = new System.Drawing.Size(53, 82);
+            this.listbutton2.TabIndex = 22;
             // 
-            // btn4timer
+            // listbutton3
             // 
-            this.btn4timer.Interval = 300;
+            this.listbutton3.FormattingEnabled = true;
+            this.listbutton3.Items.AddRange(new object[] {
+            "w",
+            "x",
+            "y",
+            "z",
+            "3",
+            "W",
+            "X",
+            "Y",
+            "Z"});
+            this.listbutton3.Location = new System.Drawing.Point(278, 188);
+            this.listbutton3.Name = "listbutton3";
+            this.listbutton3.Size = new System.Drawing.Size(53, 82);
+            this.listbutton3.TabIndex = 23;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 349);
+            this.ClientSize = new System.Drawing.Size(498, 349);
+            this.Controls.Add(this.listbutton3);
+            this.Controls.Add(this.listbutton2);
+            this.Controls.Add(this.listbutton1);
             this.Controls.Add(this.settingtxt);
             this.Controls.Add(this.entbtn);
             this.Controls.Add(this.singlebtn);
@@ -310,10 +354,10 @@
         private System.Windows.Forms.Button singlebtn;
         private System.Windows.Forms.Button entbtn;
         private System.Windows.Forms.TextBox settingtxt;
-        private System.Windows.Forms.Timer btn1timer;
-        private System.Windows.Forms.Timer btn2timer;
-        private System.Windows.Forms.Timer btn3timer;
-        private System.Windows.Forms.Timer btn4timer;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ListBox listbutton1;
+        private System.Windows.Forms.ListBox listbutton2;
+        private System.Windows.Forms.ListBox listbutton3;
     }
 }
 

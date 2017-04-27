@@ -51,6 +51,7 @@ namespace _26923626___assignment2
                 timer1.Enabled = false;
                 timer1.Enabled = true;  // resets the timer
             }else{
+
                 buttonpressed = ((Button)sender).Name;
                 // https://msdn.microsoft.com/en-us/library/tabh47cf(v=vs.110).aspx information on spliting was found here
                 

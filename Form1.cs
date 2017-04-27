@@ -35,8 +35,9 @@ namespace _26923626___assignment2
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
 
                 try
-                { richTextBox1.Text += CurrentListbox.SelectedItem; }
-
+                { 
+                    richTextBox1.Text += CurrentListbox.SelectedItem; 
+                }
                 catch
                 {
                     CurrentListbox.SelectedIndex = 0;
@@ -46,8 +47,15 @@ namespace _26923626___assignment2
                 timer1.Enabled = false;
                 timer1.Enabled = true;  // resets the timer
             }else{
+                buttonpressed = ((Button)sender).Name;
+                // https://msdn.microsoft.com/en-us/library/tabh47cf(v=vs.110).aspx information on spliting was found here
+                
+                string clickednumber = buttonpressed.Split('n')[1];
+                CurrentListbox = (ListBox)this.Controls["listbutton" + clickednumber];
 
+                richTextBox1.Text += CurrentListbox.SelectedItem;
 
+                timer1.Enabled = true;
             }
             
         }

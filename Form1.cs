@@ -99,12 +99,6 @@ namespace _26923626___assignment2
             word = "";
         }
 
-        public void wordbuilder()
-        {
-            richTextBox1.Text += word;
-
-        }
-
 
         private void button2_Click(object sender, EventArgs e)
         {

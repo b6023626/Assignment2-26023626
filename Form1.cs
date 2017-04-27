@@ -47,6 +47,7 @@ namespace _26923626___assignment2
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
                 richTextBox1.Text += CurrentListbox.SelectedItem;
 
+
                 timer1.Enabled = false;
                 timer1.Enabled = true;  // resets the timer
             }else{

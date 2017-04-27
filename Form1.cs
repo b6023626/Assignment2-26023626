@@ -29,21 +29,23 @@ namespace _26923626___assignment2
       
             if (buttonpressed == ((Button)sender).Name && timer1.Enabled == true)
             {
-                int index = CurrentListbox.SelectedIndex + 1;
-                CurrentListbox.SelectedIndex = index;
 
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
 
                 try
-                { 
+                {
+                    CurrentListbox.SelectedIndex += 1;
                     richTextBox1.Text += CurrentListbox.SelectedItem; 
                 }
                 catch
                 {
-                    CurrentListbox.SelectedIndex = 0;
+                    CurrentListbox.SelectedIndex = 1;
+                    richTextBox1.Text += CurrentListbox.SelectedItem;
 
                 }
-                
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1);
+                richTextBox1.Text += CurrentListbox.SelectedItem;
+
                 timer1.Enabled = false;
                 timer1.Enabled = true;  // resets the timer
             }else{
@@ -52,7 +54,7 @@ namespace _26923626___assignment2
                 
                 string clickednumber = buttonpressed.Split('n')[1];
                 CurrentListbox = (ListBox)this.Controls["listbutton" + clickednumber];
-
+                CurrentListbox.SelectedIndex = 1;
                 richTextBox1.Text += CurrentListbox.SelectedItem;
 
                 timer1.Enabled = true;
